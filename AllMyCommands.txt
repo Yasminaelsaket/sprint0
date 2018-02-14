@@ -1,0 +1,19 @@
+cd documents
+cd spr0 
+git init 
+git add . 
+git commit -m "add files"
+git status
+git rm --cached /Users/yasminaelsaket/Documents/spr0/3.1\ Git\ Branching\ -\ Branches\ in\ a\ Nutshell.rtf 
+git commit -m "3.1 deleted"
+git reset HEAD^
+git remote add origin https://github.com/Yasminaelsaket/sprint0.git
+git push -u origin master
+git checkout -b ReadMe
+git add /Users/yasminaelsaket/Documents/spr0/README.md 
+git commit -m "created and switched to new branch, ReadMe, added the README.md file"
+git checkout master
+git merge ReadMe
+git add /Users/yasminaelsaket/Documents/spr0/AllMyCommands.txt 
+git commit -m "added all my commands file"
+git push --all origin
